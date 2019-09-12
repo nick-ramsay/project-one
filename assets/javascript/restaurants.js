@@ -20,11 +20,11 @@ function fetchYelpData() {
             var cardDiv = $('<div id="restaurantCard" class="card mt-1" style="width: 18rem;">');
             var cardImg = $('<img src="'+ data.businesses[i].image_url +'" alt="' + data.businesses[i].name + '"class="card-img-top" alt=>');
             var cardBody = $('<div class="card-body">');
-            var cardTitle = $('<h5 class="card-title">' + data.businesses[i].name + '</h5><p>'+ data.businesses[i].location[3] +'</p>"');
+            var cardTitle = $('<h5 class="card-title">' + data.businesses[i].name + '</h5><p>'+ data.businesses[i].location.city +'</p><p>' + data.businesses[i].price + '</p>');
             var cardButton = $('<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse'+ i + '" aria-expanded="false" aria-controls="collapseOne">Show me more!</button>');
             var accordionDiv = $('<div id="collapse'+ i + '" class="collapse" aria-labelledby="headingOne" data-parent="#restaurantCard">');
-            var accordionContent = '<div class="card-body">';
-            var restaurantPhone = '<p>Phone: ' + data.businesses[i].display_phone + '"</p>';
+            var accordionContent = $('<div class="card-body">');
+            var restaurantPhone = $('<p>Phone: ' + data.businesses[i].display_phone + '</p>');
             
             $(cardBody).append(cardTitle);
             $(cardBody).append(cardButton);
