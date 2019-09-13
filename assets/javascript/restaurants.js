@@ -27,7 +27,7 @@ function fetchYelpData() {
             var accordionContent = $('<div class="card-body">');
             var yelpSite = $('<a href="' + data.businesses[i].url + '">' + data.businesses[i].name + '</a>');
             var priceRating = $('<p>' + data.businesses[i].price + '</p>');
-            var streetAddress = $('<p>'+ data.businesses[i].location.address1 +', '+ data.businesses[i].location.city + ', '+ data.businesses[i].location.state +' '+ data.businesses[i].location.zip_code + '</p>');
+            var streetAddress = $('<address><br>'+ data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + '<br>' + data.businesses[i].location.zip_code + '</address>');
             var restaurantPhone = $('<p>Phone: ' + data.businesses[i].display_phone + '</p>');
 
             $(cardBody).append(cardTitle);
