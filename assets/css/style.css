@@ -1,4 +1,9 @@
-
+html, body {
+    background-image: url("../../assets/images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
 Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
