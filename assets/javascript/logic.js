@@ -4,6 +4,7 @@ $(document).on("click", ".searchTypeButton", function () {
     $(".searchOptions").hide();
     currentSearchOption = $(this).attr("data-search-option");
     $('#' + currentSearchOption).show();
+    selectedLocation();
 })
 
 var priceFilter;
