@@ -33,11 +33,10 @@ $(document).on("click", "#submit", function () {
     }
 
     //END: restaurant search code...
-
     if (currentSearchOption === "restaurantOption") {
         fetchYelpData();
     } else if (currentSearchOption === "recipesOption") {
-        alert("Recipe Development Underway... try again later!");
+        recipeData();
     }
 })
 
