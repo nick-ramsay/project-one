@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/logic.js"></script>
     <script src="assets/javascript/restaurants.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -63,13 +64,14 @@
           What's your budget?
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" id = "low" href="#">$</a>
-          <a class="dropdown-item" id = "medium" href="#">$$</a>
-          <a class="dropdown-item" id = "high" href="#">$$$</a>
+          <a class="dropdown-item priceOption" id = "low" href="#" data-price=1>$</a>
+          <a class="dropdown-item priceOption" id = "medium" href="#" data-price=2>$$</a>
+          <a class="dropdown-item priceOption" id = "high" href="#" data-price=3>$$$</a>
+          <a class="dropdown-item priceOption" id = "very high" href="#" data-price=4>$$$$</a>
         </div>
       </div>
     </br>
-      <button type="button" class="btn btn-dark" id="sumbit">Search</button>
+      <button type="button" class="btn btn-dark" id="submit">Search</button>
     </div>
    
 
