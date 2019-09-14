@@ -32,8 +32,15 @@
     <header>Let's Eat!</header>
     <div class = "container">
         <div class = "radioChoice">
-            <input id="restaurantButton" type="radio" name="cook"/>
-              <label value="Resturant"><img src="assets/images/restaurants.png" alt="Resturant" /></label>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="cook" id="restaurantButton" autocomplete="off" checked><img src="assets/images/restaurants.png" alt="Resturant" />
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="cook" id="recipeButton" autocomplete="off"><img src="assets/images/recipes.png" alt="Recipes" />
+                </label>
+               
+              </div>
 
             <input id="recipeButton" type="radio" name="cook" />
               <label value="Recipes"><img src="assets/images/recipes.png" alt="Recipes" /></label>
