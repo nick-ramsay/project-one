@@ -9,7 +9,7 @@ var restaurantSearchInput;
 var restaurantQueryURL;
 
 function fetchYelpData() {
-    console.log(queryURL);
+    console.log(restaurantQueryURL);
     $.ajax({
         url: restaurantQueryURL,
         headers: {

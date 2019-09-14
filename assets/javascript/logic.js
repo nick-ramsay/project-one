@@ -1,3 +1,11 @@
+var currentSearchOption;
+
+$(document).on("click", ".searchTypeButton", function () {
+    $(".searchOptions").hide();
+    currentSearchOption = $(this).attr("data-search-option");
+    $('#' + currentSearchOption).show();
+})
+
 var priceFilter;
 
 $(document).on("click", ".priceOption", function () {
@@ -21,12 +29,10 @@ $(document).on("click", "#submit", function () {
         restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
     }
 
-    if ($('#restaurantButton').is(':checked')) {
+    if (currentSearchOption === "restaurantOption") {
         fetchYelpData()
-    } else if ($('#recipeButton').is(':checked')) {
+    } else if (currentSearchOption === "recipesOption") {
         alert("Recipe Development Underway... try again later!");
-    } else {
-        alert("Please pick Restaurant or Recipe radio buttons");
     }
 })
 
