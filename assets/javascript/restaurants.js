@@ -9,6 +9,7 @@ var searchInput = "food";
 var queryURL;
 
 function fetchYelpData() {
+    console.log(queryURL);
     $.ajax({
         url: queryURL,
         headers: {
