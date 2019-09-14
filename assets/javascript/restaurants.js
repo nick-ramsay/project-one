@@ -4,14 +4,14 @@ var currentLongitude = 151.2153; //Sydney Opera House as default location
 var selectedLatitude = -33.8568; //Sydney Opera House as default location
 var selectedLongitude = 151.2153; //Sydney Opera House as default location
 
-var searchInput = "food";
+var restaurantSearchInput;
 
-var queryURL;
+var restaurantQueryURL;
 
 function fetchYelpData() {
     console.log(queryURL);
     $.ajax({
-        url: queryURL,
+        url: restaurantQueryURL,
         headers: {
             'Authorization': 'Bearer QvfBaBpUXhWcP0fZX8iVke7H7mrncjHs0QNdG9IhTIZdkVtpUt4zwFXNgyK3O0JUiXq-aaXAvW-rWslz04lXssOsIeqoCQKyfTGPNgM5Qqk1aYGQD2PdUzq1zoV3XXYx',
         },
@@ -68,16 +68,5 @@ function currentLocation(position) {
     currentLongitude = position.coords.longitude;
     selectedLongitude = position.coords.longitude;
 }
-
-
-$(document).on("click", "#sumbit", function () {
-    $("#table").empty();
-    if ($("#userInput").val() !== "") {
-        searchInput = $("#userInput").val();
-    }
-    queryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + searchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
-    if ($('#restaurantButton').is(':checked')) { fetchYelpData() };
-    console.log(queryURL);
-})
 
 window.onload = getLocation();
