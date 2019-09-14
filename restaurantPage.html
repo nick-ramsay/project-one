@@ -1,0 +1,69 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel = "stylesheet" href = "assets/css/style.css">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+           integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+           crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+           integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+           crossorigin="anonymous"></script>
+
+    </head>
+
+    <div class = "container">
+    <h1> Find a Restaurant Near You</h1>
+    </div>
+    <body>
+    <div class = "container">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">What are you in the mood for?</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="e.g. tacos, sushi, pizza..." id="userInput">
+    </div>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div id="table">
+
+          </div>
+        </div>
+      </div>
+    </div> </br>
+    <div class = "container">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  What's your budget?
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" id = "low" href="#">$</a>
+                  <a class="dropdown-item" id = "medium" href="#">$$</a>
+                  <a class="dropdown-item" id = "high" href="#">$$$</a>
+                </div>
+            </div>
+            </br>
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      How far do you want to travel?
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" id = "low" href="#"> less than 1km</a>
+                      <a class="dropdown-item" id = "medium" href="#">1km - 3km</a>
+                      <a class="dropdown-item" id = "high" href="#">3km+</a>
+                    </div>
+                </div>
+                </br>
+           
+              <button type="button" class="btn btn-dark" id="sumbit">Search</button>
+     </div>
+           
+        
+
+</body>
+    </html>
+   
