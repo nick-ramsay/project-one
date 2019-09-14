@@ -15,6 +15,8 @@ $(document).on("click", ".priceOption", function () {
 
 $(document).on("click", "#submit", function () {
     $("#table").empty();
+    
+    //Start: restaurant search code...
     if ($("#userInput").val() !== "") {
         restaurantSearchInput = $("#userInput").val();
     } else {
@@ -29,8 +31,10 @@ $(document).on("click", "#submit", function () {
         restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
     }
 
+    //END: restaurant search code...
+
     if (currentSearchOption === "restaurantOption") {
-        fetchYelpData()
+        fetchYelpData();
     } else if (currentSearchOption === "recipesOption") {
         alert("Recipe Development Underway... try again later!");
     }
