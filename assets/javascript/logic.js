@@ -55,6 +55,7 @@ function currentLocation(position) {
 
     currentLongitude = position.coords.longitude;
     selectedLongitude = position.coords.longitude;
+    console.log(selectedLatitude);
 }
 
 window.onload = getLocation();

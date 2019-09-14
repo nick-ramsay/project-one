@@ -5,7 +5,7 @@ function selectedLocation() {
         url: selectedLocationURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response.results[0].address_components[2].long_name + ", " + response.results[0].address_components[4].long_name +  ", " + response.results[0].address_components[5].long_name);
+        $("#selectedLocation").text("Location: " + response.results[0].formatted_address);
     }
     )
 }

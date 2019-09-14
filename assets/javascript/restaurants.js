@@ -1,8 +1,8 @@
-var currentLatitude = -33.8568; //Sydney Opera House as default location
-var currentLongitude = 151.2153; //Sydney Opera House as default location
+var currentLatitude = -33.8567844; //Sydney Opera House as default location
+var currentLongitude = 151.215256; //Sydney Opera House as default location
 
-var selectedLatitude = -33.8568; //Sydney Opera House as default location
-var selectedLongitude = 151.2153; //Sydney Opera House as default location
+var selectedLatitude = -33.8567844; //Sydney Opera House as default location
+var selectedLongitude = 151.2152967; //Sydney Opera House as default location
 
 var restaurantSearchInput;
 
