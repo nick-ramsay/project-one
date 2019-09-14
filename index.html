@@ -27,6 +27,9 @@
   <script src="assets/javascript/logic.js"></script>
   <script src="assets/javascript/restaurants.js"></script>
   <script src="assets/javascript/recipe.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE&libraries=places&callback=initAutocomplete"
+    async defer></script>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   <title>Let's Eat!</title>
@@ -60,6 +63,24 @@
           aria-describedby="inputGroup-sizing-lg" id="userInput">
       </div>
       <h6 style="color:white; text-transform:capitalize;" id="selectedLocation" align="center"></h6>
+      <div class="col-md-12" align="center">
+        <div id="changeLocation">
+          <button type="button" class="btn btn-danger btn-sm" id="changeLocationBtn">
+            Change Location
+          </button>
+        </div>
+        <div id="locationParameters" style="display: none;">
+          <div class="locationInput m-1" id="locationField">
+            <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" />
+          </div>
+          <button type="button" class="btn btn-danger btn-sm m-1 closeLocationParameters" id="closeLocation">
+            Close
+          </button>
+          <button type="button" class="btn btn-success btn-sm m-1 closeLocationParameters" id="saveLocation">
+            Save Location
+          </button>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div id="table">
