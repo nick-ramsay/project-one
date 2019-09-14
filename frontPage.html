@@ -22,25 +22,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/restaurants.js"></script>
 
-    <title>I Love Food!!</title>
+    <title>Let's Eat</title>
   </head>
 
   <body>
     <div class = "container">
-        <h1>I Love Food!!</h1>
+        <h1>Let's Eat</h1>
+        <div class = "radioChoice">
+            <label><input type="radio" name="cook" value="Resturant">Resturant</label> 
+            <label><input type="radio" name="cook" value="Recipes">Recipes</label>
+          </div>
       <div class="input-group input-group-lg">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-lg">Let's eat:</span>
+          <span class="input-group-text" id="inputGroup-sizing-lg">Find Food:</span>
         </div>
+        
       
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="userInput">
       </div>
-      <div class = "radioChoice">
-        <label><input type="radio" name="cook" value="Resturant">Resturant</label> 
-        <label><input type="radio" name="cook" value="Recipes">Recipes</label>
-      </div>
+     
       
-      <button type="button" class="btn btn-dark" id="sumbit">Submit</button>
+      
 
       <div class="container">
         <div class="row">
@@ -52,7 +54,22 @@
 
 
     
+    </div> </br>
+    <div class = "container">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          What's your budget?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id = "low" href="#">$</a>
+          <a class="dropdown-item" id = "medium" href="#">$$</a>
+          <a class="dropdown-item" id = "high" href="#">$$$</a>
+        </div>
+      </div>
+    </br>
+      <button type="button" class="btn btn-dark" id="sumbit">Search</button>
     </div>
+   
 
     
 
