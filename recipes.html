@@ -29,47 +29,49 @@
 
     <title>Let's Eat!</title>
 </head>
-
-<div class="container">
-    <h1> Find a Recipe</h1>
-</div>
-
-<body>
+<div class="recipesoption">
     <div class="container">
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Search for recipes based on your
-                    ingredients</span>
+        <h1> Find a Recipe</h1>
+    </div>
+
+    <body>
+        <div class="container">
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Search for recipes based on your
+                        ingredients</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..."
+                    id="userInput">
             </div>
-            <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
+            </br>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dietary Requirements
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" id="low" href="#">Vegetarian</a>
+                    <a class="dropdown-item" id="medium" href="#">Vegan</a>
+                    <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
+                    <a class="dropdown-item" id="high" href="#">Dairy Free</a>
+                    <a class="dropdown-item" id="high" href="#">Gluten free</a>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div id="table">
+
+                </div>
+            </div>
         </div>
         </br>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dietary Requirements
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" id="low" href="#">Vegetarian</a>
-                <a class="dropdown-item" id="medium" href="#">Vegan</a>
-                <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
-                <a class="dropdown-item" id="high" href="#">Dairy Free</a>
-                <a class="dropdown-item" id="high" href="#">Gluten free</a>
-            </div>
-        </div>
-
         <div class="container">
-
-            <div id="table">
-
-            </div>
+            <button type="button" class="btn btn-dark" id="sumbit">Search</button>
         </div>
-    </div>
-    </br>
-    <div class="container">
-        <button type="button" class="btn btn-dark" id="sumbit">Search</button>
-    </div>
+</div>
 </body>
 
 </html>
