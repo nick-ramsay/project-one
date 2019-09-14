@@ -1,0 +1,55 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel = "stylesheet" href = "assets/css/style.css">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+           integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+           crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+           integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+           crossorigin="anonymous"></script>
+
+    </head>
+
+    <div class = "container">
+    <h1> Find a Recipe</h1>
+    </div>
+    <body>
+    <div class = "container">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Search for recipes based on your ingredients</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
+    </div>
+</br>
+    <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dietary Requirements
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" id = "low" href="#">Vegetarian</a>
+              <a class="dropdown-item" id = "medium" href="#">Vegan</a>
+              <a class="dropdown-item" id = "medium" href="#">Pescatarian</a>
+              <a class="dropdown-item" id = "high" href="#">Dairy Free</a>
+              <a class="dropdown-item" id = "high" href="#">Gluten free</a>
+            </div>
+        </div>
+
+      <div class="container">
+        
+          <div id="table">
+
+          </div>
+        </div>
+      </div>
+     </br>
+    <div class = "container">
+       <button type="button" class="btn btn-dark" id="sumbit">Search</button>
+    </div>
+</body>
+    </html>
+   
