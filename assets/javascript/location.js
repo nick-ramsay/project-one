@@ -1,3 +1,9 @@
+var currentLatitude = 0;
+var currentLongitude = 0;
+
+var selectedLatitude = 0;
+var selectedLongitude = 0;
+
 function selectedLocation() {
     selectedLocationURL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + selectedLatitude + ',' + selectedLongitude + '&key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE';
 
@@ -14,6 +20,18 @@ function selectedLocation() {
 
 var addressSearchInput;
 var newAddressURL;
+
+/*function changeSelectedAddress () {
+    $.ajax({
+        url: newAddressURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response.results[0].geometry.location.lat);
+        console.log(results);
+
+        console.log(response.results[0].geometry.location.long);
+    })
+}*/
 
 function initAutocomplete() {
   // Create the autocomplete object, restricting the search predictions to
@@ -42,7 +60,8 @@ function fillInAddress() {
   }
   addressSearchInput = addressSearchInput.replace(/ /g,"+");
   newAddressURL = ('https://maps.googleapis.com/maps/api/geocode/json?address=' + addressSearchInput + '&key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE');
-  console.log(newAddressURL);
+  //console.log(newAddressURL);
+  //changeSelectedAddress();
 }
 
 // Bias the autocomplete object to the user's geographical location,
