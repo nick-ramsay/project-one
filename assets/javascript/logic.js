@@ -37,6 +37,7 @@ $(document).on("click", "#submit", function () {
     } else if (currentSearchOption === "recipesOption") {
         recipeData();
         setMasonry();
+        // setMagnific();
     }
 })
 
