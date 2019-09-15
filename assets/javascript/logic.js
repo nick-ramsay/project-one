@@ -3,8 +3,10 @@ var currentSearchOption;
 $(document).on("click", ".searchTypeButton", function () {
     $(".searchOptions").hide();
     currentSearchOption = $(this).attr("data-search-option");
+    if (currentSearchOption === "restaurantOption") {
+        getLocation();
+    }
     $('#' + currentSearchOption).show();
-    selectedLocation();
 })
 
 var priceFilter;
@@ -16,7 +18,7 @@ $(document).on("click", ".priceOption", function () {
 
 $(document).on("click", "#submit", function () {
     $("#table").empty();
-    
+
     //Start: restaurant search code...
     if ($("#userInput").val() !== "") {
         restaurantSearchInput = $("#userInput").val();
@@ -54,7 +56,6 @@ function currentLocation(position) {
 
     currentLongitude = position.coords.longitude;
     selectedLongitude = position.coords.longitude;
-    console.log(selectedLatitude);
-}
 
-window.onload = getLocation();
+    selectedLocation();
+}
