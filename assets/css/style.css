@@ -11,3 +11,14 @@ Header {
     color: rgb(219, 215, 215);
 }
 
+#recipeImg {
+    padding: 30px;
+}
+
+.recipeDetails {
+    padding-top: 30px;
+}
+
+.recipeIngredient {
+    padding: 15px;
+}
