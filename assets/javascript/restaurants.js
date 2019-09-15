@@ -9,7 +9,6 @@ var restaurantSearchInput;
 var restaurantQueryURL;
 
 function fetchYelpData() {
-    console.log(restaurantQueryURL);
     $.ajax({
         url: restaurantQueryURL,
         headers: {
@@ -18,8 +17,6 @@ function fetchYelpData() {
         method: 'GET',
         dataType: 'json'
     }).then(function (data) {
-        console.log(data);
-        console.log(data.businesses.length);
         for (i = 0; i < data.businesses.length; i++) {
             var cardDiv = $('<div id="restaurantCard" class="card m-1" style="width: 18rem; float:left;">');
             var cardImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '"class="card-img-top">');

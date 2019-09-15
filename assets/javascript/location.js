@@ -1,8 +1,8 @@
-var currentLatitude = 0;
-var currentLongitude = 0;
+var currentLatitude = -33.856159;
+var currentLongitude = 151.215256;
 
-var selectedLatitude = 0;
-var selectedLongitude = 0;
+var selectedLatitude = -33.856159;
+var selectedLongitude = 151.215256;
 
 function selectedLocation() {
     selectedLocationURL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + selectedLatitude + ',' + selectedLongitude + '&key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE';
@@ -11,7 +11,7 @@ function selectedLocation() {
         url: selectedLocationURL,
         method: "GET"
     }).then(function (response) {
-        $("#selectedLocation").text("Location: " + response.results[0].formatted_address);
+        $("#selectedLocation").text(response.results[0].formatted_address);
     }
     )
 }
@@ -21,17 +21,16 @@ function selectedLocation() {
 var addressSearchInput;
 var newAddressURL;
 
-/*function changeSelectedAddress () {
+function changeSelectedAddress () {
     $.ajax({
         url: newAddressURL,
         method: "GET"
     }).then(function(response){
-        console.log(response.results[0].geometry.location.lat);
-        console.log(results);
-
-        console.log(response.results[0].geometry.location.long);
+        selectedLatitude = response.results[0].geometry.location.lat;
+        selectedLongitude = response.results[0].geometry.location.lng;
+        selectedLocation();
     })
-}*/
+}
 
 function initAutocomplete() {
   // Create the autocomplete object, restricting the search predictions to
@@ -56,28 +55,12 @@ function fillInAddress() {
 
 
   for (var i = 0; i < place.address_components.length; i++) {
-      addressSearchInput = addressSearchInput + place.address_components[i].long_name;
+      addressSearchInput = addressSearchInput + place.address_components[i].long_name + " ";
   }
   addressSearchInput = addressSearchInput.replace(/ /g,"+");
   newAddressURL = ('https://maps.googleapis.com/maps/api/geocode/json?address=' + addressSearchInput + '&key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE');
-  //console.log(newAddressURL);
-  //changeSelectedAddress();
-}
-
-// Bias the autocomplete object to the user's geographical location,
-// as supplied by the browser's 'navigator.geolocation' object.
-function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      var geolocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      var circle = new google.maps.Circle(
-        { center: geolocation, radius: position.coords.accuracy });
-      autocomplete.setBounds(circle.getBounds());
-    });
-  }
+  changeSelectedAddress();
+  locationParametersClose();
 }
 
 function locationParametersOpen() {
