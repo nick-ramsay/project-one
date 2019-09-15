@@ -13,7 +13,6 @@ var priceFilter;
 
 $(document).on("click", ".priceOption", function () {
     priceFilter = $(this).attr("data-price");
-    console.log(priceFilter);
 }) //Set's price filter variable
 
 $(document).on("click", "#submit", function () {
@@ -27,8 +26,6 @@ $(document).on("click", "#submit", function () {
     }
 
     restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
-
-    console.log(priceFilter);
 
     if (priceFilter !== undefined) {
         restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
@@ -56,6 +53,18 @@ function currentLocation(position) {
 
     currentLongitude = position.coords.longitude;
     selectedLongitude = position.coords.longitude;
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var geolocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          var circle = new google.maps.Circle(
+            { center: geolocation, radius: position.coords.accuracy });
+          autocomplete.setBounds(circle.getBounds());
+        });
+    }//Used for google autocomplete to pick nearby addresses as default
 
     selectedLocation();
 }
