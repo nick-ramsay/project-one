@@ -37,6 +37,7 @@ $(document).on("click", "#submit", function () {
         fetchYelpData();
     } else if (currentSearchOption === "recipesOption") {
         recipeData();
+        setMasonry();
     }
 })
 

@@ -11,14 +11,8 @@ Header {
     color: rgb(219, 215, 215);
 }
 
-#recipeImg {
-    padding: 30px;
+.box {
+    margin: 10px;
+    border: 5px solid white;
 }
 
-.recipeDetails {
-    padding-top: 30px;
-}
-
-.recipeIngredient {
-    padding: 15px;
-}
