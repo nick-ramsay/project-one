@@ -4,11 +4,17 @@ html, body {
     background-size: cover;
     height: 100%;
 }
+
 Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 100px;
     color: rgb(219, 215, 215);
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color: rgb(247, 247, 92);
 }
 
 .box {
