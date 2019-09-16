@@ -16,6 +16,11 @@ Header {
     border: 5px solid white;
 }
 
+.restaurantCard {
+    margin: 10px;
+    border: 5px solid white;
+}
+
 .recipe-click-button  .recipe-details {
     display: none;
 }

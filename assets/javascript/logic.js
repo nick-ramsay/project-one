@@ -4,6 +4,7 @@ $(document).on("click", ".searchTypeButton", function () {
     $(".searchOptions").hide();
     currentSearchOption = $(this).attr("data-search-option");
     if (currentSearchOption === "restaurantOption") {
+        selectedLocation();
         getLocation();
     }
     $('#' + currentSearchOption).show();
