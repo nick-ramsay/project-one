@@ -20,14 +20,14 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-  
+
   <!-- linked files -->
   <script src="assets/javascript/location.js"></script>
   <script src="assets/javascript/logic.js"></script>
@@ -50,91 +50,45 @@
         <label class="btn btn-outline-warning">
           <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="restaurantOption" src="assets/images/restaurants.jpg" alt="Resturant" />
-        </br>
-          <h2>Restaurants</h2>
         </label>
         <label class="btn btn-outline-warning">
           <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="recipesOption" src="assets/images/recipes.png" alt="Recipes" />
-        </br>
-          <h2>Recipes</h2>
         </label>
       </div>
     </div>
   </br>
 
- 
-        <!-- Restaurant input field -->
-        <div class="searchOptions" id="restaurantOption" style="display: none;">
-            <h1 class="findHeading">Find a Restaurant</h1>
+  <!-- Restaurant input field -->
+    <div class="searchOptions" id="restaurantOption" style="display: none;">
+      <h1 class="findHeading">Find a Restaurant</h1>
 
-            <div class="input-group input-group-lg container">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Let's Go Eat:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="userInput" placeholder="e.g. chinese, pizza, burgers...">
-            </div>
-            <div class="col-md-12">
-                <h6 id="selectedLocation"></h6>
-                <div id="changeLocation">
-                    <button type="button" class="btn btn-success btn-sm" id="changeLocationBtn">
-                        Change Location
-                    </button>
-                </div>
-                <div id="locationParameters" style="display: none;">
-                    <div class="locationInput m-1" id="locationField">
-                        <input id="autocomplete" placeholder="Enter your address" type="text" />
-                        <button type="button" class="btn btn-dark btn-sm m-1 closeLocationParameters" id="closeLocation">
-                            Close
-                        </button>
-                    </div>
-                </div>
-            </div>
-            </br>
-            <div class="container">
-                <div class="btn-group dropdown" role="group" aria-label="Basic example">
-                    <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        What's your budget?
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item priceOption" id="low" href="#" data-price=1>$</a>
-                        <a class="dropdown-item priceOption" id="medium" href="#" data-price=2>$$</a>
-                        <a class="dropdown-item priceOption" id="high" href="#" data-price=3>$$$</a>
-                        <a class="dropdown-item priceOption" id="very high" href="#" data-price=4>$$$$</a>
-                    </div>
-                 
-                    <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        How far do you want to travel?
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" id="low" href="#"> less than 1km</a>
-                        <a class="dropdown-item" id="medium" href="#">1km - 3km</a>
-                        <a class="dropdown-item" id="high" href="#">3km+</a>
-                    </div>
-                </div>
-                </br>
-                <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div id="table">
-
-                    </div>
-                </div>
-            </div>
+      <div class="input-group input-group-lg container">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Let's Go Eat:</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-lg" id="userInput" placeholder="e.g. chinese, pizza, burgers...">
+      </div>
+      <div class="col-md-12">
+          <h6 id="selectedLocation"></h6>
+        <div id="changeLocation">
+          <button type="button" class="btn btn-success btn-sm" id="changeLocationBtn">
+            Change Location
+          </button>
         </div>
         <div id="locationParameters" style="display: none;">
           <div class="locationInput m-1" id="locationField">
             <input id="autocomplete" placeholder="Enter your address" type="text" />
             <button type="button" class="btn btn-dark btn-sm m-1 closeLocationParameters" id="closeLocation">
-              Cancel
+              Close
             </button>
           </div>
         </div>
       </div>
     </br>
     <div class="container">
-        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+      
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             What's your budget?
@@ -145,7 +99,9 @@
             <a class="dropdown-item priceOption" id="high" href="#" data-price=3>$$$</a>
             <a class="dropdown-item priceOption" id="very high" href="#" data-price=4>$$$$</a>
           </div>
+          
 
+          <div class="btn-group dropdown" role="group" aria-label="Basic example">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               How far do you want to travel?
           </button>
@@ -155,59 +111,66 @@
             <a class="dropdown-item" id = "high" href="#">3km+</a>
           </div>
         </div>
+      </div>
       </br>
       <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
     </div>
     <div class="container">
       <div class="row">
-        <div id="table">
-    
+        <div class="restaurantResults">
+
         </div>
       </div>
     </div>
   </div>
 </div>
 
-        <div class="container">
-            <div class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
-            </div>
-            </br>
+<!-- Recipe input fields  -->
+  <div class="searchOptions" id="recipesOption" style="display: none;">
+    <div class="container">
+      <h1 class="findHeading"> Find a Recipe</h1>
+    </div>
 
-            <div class="btn-group dropdown" role="group" aria-label="Basic example">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dietary Requirements
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" id="Vegetarian" href="#">Vegetarian</a>
-                        <a class="dropdown-item" id="Vegan" href="#">Vegan</a>
-                        <a class="dropdown-item" id="Pescatarian" href="#">Pescatarian</a>
-                        <a class="dropdown-item" id="Dairy" href="#">Dairy Free</a>
-                        <a class="dropdown-item" id="Gluten" href="#">Gluten free</a>
-                    </div>
-                </div>
-              </br></br>
-                <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Meal Type
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                    <a class="dropdown-item" id="Breakfast" href="#">Breakfast</a>
-                    <a class="dropdown-item" id="Lunch" href="#">Lunch</a>
-                    <a class="dropdown-item" id="Dinner" href="#">Dinner</a>
-                    <a class="dropdown-item" id="Snack" href="#">Snack</a>
-                    <a class="dropdown-item" id="Dessert" href="#">Dessert</a>
-                </div>
-            </div>
+
+      <div class="container">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
         </div>
         </br>
-       </br>
+
+        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dietary Requirements
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="low" href="#">Vegetarian</a>
+            <a class="dropdown-item" id="medium" href="#">Vegan</a>
+            <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
+            <a class="dropdown-item" id="high" href="#">Dairy Free</a>
+            <a class="dropdown-item" id="high" href="#">Gluten free</a>
+          </div>
+        </div>
+        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Meal Type
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="low" href="#">Breakfast</a>
+            <a class="dropdown-item" id="medium" href="#">Lunch</a>
+            <a class="dropdown-item" id="medium" href="#">Dinner</a>
+            <a class="dropdown-item" id="high" href="#">Snack</a>
+            <a class="dropdown-item" id="high" href="#">Dessert</a>
+          </div>
+      </div>
+    </div>
         <div class="container">
-            <button type="button" class="btn btn-danger btn-lg btn-custom" id="submit">Search</button>
+          <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
         </div>
 
         <div class="container">
@@ -217,7 +180,7 @@
           </div>
         </div>
         <div id="recipeModal" class="mfp-hide white-popup-block">
-            <!-- <p><span id="recipeDetails"></span></p>          
+            <!-- <p><span id="recipeDetails"></span></p>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
         </div>
       </div>
@@ -227,6 +190,6 @@
 
     </div>
     </body>
-    
+
 
 </html>

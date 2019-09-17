@@ -36,18 +36,30 @@ function recipeData() {
             $(recipeContent).append(recipehealth);
             $(recipeContent).append(recipeIngredients);
             $(recipeContent).append(modalButton);
+
         }
+        
     });
+}
+
+function loadData() {
+    console.log($("#recipesOption #table"));
+
+    
+    $("#recipesOption #table").hide();
+   $("#recipesOption #table").before('<div class="loader">');
+    
+
 }
 
 function setMasonry() {
     setTimeout(function () {
+        $(".loader").remove();
+        $("#recipesOption #table").fadeIn(500);
         $('.recipe-table').masonry({
-
             itemSelector: '.box',
         });
     }, 5000);
-
 }
 
 $(document).on('click', '.recipe-click-button', function () {
