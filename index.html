@@ -27,16 +27,16 @@
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-  
-    
+
   <!-- linked files -->
   <script src="assets/javascript/location.js"></script>
   <script src="assets/javascript/logic.js"></script>
   <script src="assets/javascript/restaurants.js"></script>
   <script src="assets/javascript/recipe.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE&libraries=places&callback=initAutocomplete" async defer></script>
-
+  <!-- Google maps (has to be on bottom) -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE&libraries=places&callback=initAutocomplete"
+    async defer></script>
   <title>Let's Eat!</title>
 </head>
 
@@ -47,8 +47,8 @@
     <!-- Restaurant/Recipe toggle buttons -->
     <div class="radioChoice">
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-warning active">
-          <input type="radio" name="cook" autocomplete="off" checked><img class="searchTypeButton"
+        <label class="btn btn-outline-warning">
+          <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="restaurantOption" src="assets/images/restaurants.jpg" alt="Resturant" />
         </label>
         <label class="btn btn-outline-warning">
@@ -115,7 +115,7 @@
     <div class="container">
       <div class="row">
         <div id="table">
-    
+
         </div>
       </div>
     </div>
@@ -123,12 +123,12 @@
 </div>
 
 <!-- Recipe input fields  -->
-  <div class="searchOptions" id="recipesOption">
+  <div class="searchOptions" id="recipesOption" style="display: none;">
     <div class="container">
       <h1 class="findHeading"> Find a Recipe</h1>
     </div>
 
-    
+
       <div class="container">
         <div class="input-group input-group-lg">
           <div class="input-group-prepend">
@@ -175,7 +175,7 @@
           </div>
         </div>
         <div id="recipeModal" class="mfp-hide white-popup-block">
-            <!-- <p><span id="recipeDetails"></span></p>          
+            <!-- <p><span id="recipeDetails"></span></p>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
         </div>
       </div>
@@ -185,6 +185,6 @@
 
     </div>
     </body>
-    
+
 
 </html>
