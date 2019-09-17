@@ -44,17 +44,15 @@
   <div class="container">
     <div class="radioChoice">
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
+        <label class="btn btn-outline-warning active">
           <input type="radio" name="cook" autocomplete="off" checked><img class="searchTypeButton"
             data-search-option="restaurantOption" src="assets/images/restaurants.jpg" alt="Resturant" />
         </label>
-        <label class="btn btn-secondary">
+        <label class="btn btn-outline-warning">
           <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="recipesOption" src="assets/images/recipes.png" alt="Recipes" />
         </label>
-
       </div>
-
     </div>
 
     <div class="searchOptions" id="restaurantOption" style="display: none;">
@@ -82,17 +80,10 @@
           </button>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div id="table">
-
-          </div>
-        </div>
-      </div>
-      </br>
-      <div class="container">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    </br>
+    <div class="container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             What's your budget?
           </button>
@@ -103,11 +94,18 @@
             <a class="dropdown-item priceOption" id="very high" href="#" data-price=4>$$$$</a>
           </div>
         </div>
-        </br>
-        <button type="button" class="btn btn-dark" id="submit">Search</button>
+      </br>
+      <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="table">
+    
+        </div>
       </div>
-    </div> </br>
-  </div>
+    </div>
+  </div> </br>
+</div>
 
   <div class="searchOptions" id="recipesOption">
     <div class="container">
@@ -153,7 +151,7 @@
           </div>
         </div>
         <div class="container">
-          <button type="button" class="btn btn-dark" id="submit">Search</button>
+          <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
         </div>
 
         <div class="container">
