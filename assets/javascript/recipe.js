@@ -36,7 +36,9 @@ function recipeData() {
             $(recipeContent).append(recipehealth);
             $(recipeContent).append(recipeIngredients);
             $(recipeContent).append(modalButton);
+
         }
+        
     });
 }
 
@@ -53,7 +55,7 @@ function loadData() {
 function setMasonry() {
     setTimeout(function () {
         $(".loader").remove();
-        $("#recipesOption #table").fadeIn(300);
+        $("#recipesOption #table").fadeIn(500);
         $('.recipe-table').masonry({
             itemSelector: '.box',
         });
