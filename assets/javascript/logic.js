@@ -35,6 +35,8 @@ $(document).on("click", "#submit", function () {
     //END: restaurant search code...
     if (currentSearchOption === "restaurantOption") {
         fetchYelpData();
+        loadRestaurantData();
+        setRestaurantMasonry();
     } else if (currentSearchOption === "recipesOption") {
         loadData();
         recipeData();
