@@ -9,12 +9,12 @@ Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 100px;
-    color: lightgray;
+    color: rgb(45, 8, 80);
 }
 
 .findHeading {
     font-family: 'Lobster', cursive;
-    color: rgb(247, 247, 92);
+    color: rgb(45, 8, 80)
 }
 
 .radioChoice {
@@ -30,7 +30,7 @@ Header {
  }
 
 #selectedLocation {
-    color: white;
+    color:  rgb(45, 8, 80);
     text-transform: capitalize;
     text-align: center;
 }
@@ -85,8 +85,8 @@ color:white;
 }
 
 #submit {
- background-color:  rgb(247, 247, 92);
- color: #6A6A6A;
- border: none;
- font-weight: bold;
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    color: rgb(45, 8, 80);
+    border: none;
 }

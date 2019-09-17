@@ -36,20 +36,13 @@ function recipeData() {
             $(recipeContent).append(recipehealth);
             $(recipeContent).append(recipeIngredients);
             $(recipeContent).append(modalButton);
-
         }
-        
     });
 }
 
 function loadData() {
-    console.log($("#recipesOption #table"));
-
-    
     $("#recipesOption #table").hide();
-   $("#recipesOption #table").before('<div class="loader">');
-    
-
+    $("#recipesOption #table").before('<div class="loader">');
 }
 
 function setMasonry() {
