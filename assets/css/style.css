@@ -9,7 +9,7 @@ Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 100px;
-    color: rgb(219, 215, 215);
+    color: lightgray;
 }
 
 .findHeading {
@@ -23,6 +23,11 @@ Header {
     flex-direction: row;
     justify-content: center;
 }
+ h2 {
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    color: rgb(45, 8, 80);
+ }
 
 #selectedLocation {
     color: white;
@@ -34,12 +39,7 @@ Header {
     text-align: center;
 }
 
-.box {
-    margin: 10px;
-    border: 5px solid white;
-}
-
-.restaurantCard {
+.box, .restaurantCard {
     margin: 10px;
     border: 5px solid white;
 }
@@ -78,3 +78,15 @@ Header {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+.btn-custom {
+
+background-color:#6A6A6A;
+color:white;
+}
+
+#submit {
+ background-color:  rgb(247, 247, 92);
+ color: #6A6A6A;
+ border: none;
+ font-weight: bold;
+}
