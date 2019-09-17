@@ -35,12 +35,7 @@ Header {
     text-align: center;
 }
 
-.box {
-    margin: 10px;
-    border: 5px solid white;
-}
-
-.restaurantCard {
+.box, .restaurantCard {
     margin: 10px;
     border: 5px solid white;
 }
