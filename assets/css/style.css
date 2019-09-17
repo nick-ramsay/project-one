@@ -4,6 +4,7 @@ html, body {
     background-size: cover;
     height: 100%;
 }
+
 Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
@@ -11,3 +12,47 @@ Header {
     color: rgb(219, 215, 215);
 }
 
+.findHeading {
+    font-family: 'Lobster', cursive;
+    color: rgb(247, 247, 92);
+}
+
+.radioChoice {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#selectedLocation {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#changeLocation, #locationField {
+    text-align: center;
+}
+
+.box {
+    margin: 10px;
+    border: 5px solid white;
+}
+
+.restaurantCard {
+    margin: 10px;
+    border: 5px solid white;
+}
+
+.recipe-click-button  .recipe-details {
+    display: none;
+}
+
+.recipe-details {
+    color: white;
+    text-align: center;
+}
+
+.mfp-inline-holder {
+    background-color: black;
+}
