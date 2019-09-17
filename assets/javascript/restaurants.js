@@ -17,9 +17,8 @@ function fetchYelpData() {
         method: 'GET',
         dataType: 'json'
     }).then(function (data) {
-
         for (i = 0; i < data.businesses.length; i++) {
-            var cardDiv = $('<div id="restaurantCard" class="card m-1" style="width: 18rem; float:left;">');
+            var cardDiv = $('<div id="restaurantCard" class="card m-1 restaurantCard" style="width: 18rem; float:left;">');
             var cardImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '"class="card-img-top">');
             var cardBody = $('<div class="card-body">');
             var cardTitle = $('<h5 class="card-title">' + data.businesses[i].name + '</h5>');
@@ -31,7 +30,7 @@ function fetchYelpData() {
             var priceRating = $('<p>' + data.businesses[i].price + '</p>');
             var streetAddress = $('<address><br>' + data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + ' ' + data.businesses[i].location.zip_code + '</address>');
             var restaurantPhone = $('<p>Phone: ' + data.businesses[i].display_phone + '</p>');
-            
+
             $(".restaurantResults").append(cardDiv);
             $(cardBody).append(cardTitle);
             $(cardBody).append(cardSubtitle);
@@ -44,18 +43,27 @@ function fetchYelpData() {
             $(cardBody).append(accordionDiv);
             $(cardDiv).append(cardImg);
             $(cardDiv).append(cardBody);
-            setRestaurantMasonry();
 
         }
+        console.log("1");
     });
+}
+
+function loadRestaurantData() {
+    console.log($(".restaurantResults"));
+
+    $(".restaurantResults").hide();
+    $(".restaurantResults").before('<div class="loader">');
+
+
 }
 
 function setRestaurantMasonry() {
     setTimeout(function () {
+        $(".loader").remove();
+        $(".restaurantResults").fadeIn(500);
         $('.restaurantResults').masonry({
-            
-            itemSelector: '#restaurantCard',
+            itemSelector: '',
         });
     }, 5000);
-
 }
