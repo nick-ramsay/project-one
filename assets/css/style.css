@@ -30,7 +30,7 @@ Header {
  }
 
 #selectedLocation {
-    color: white;
+    color:  rgb(45, 8, 80);
     text-transform: capitalize;
     text-align: center;
 }
