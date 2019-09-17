@@ -36,9 +36,9 @@ $(document).on("click", "#submit", function () {
     if (currentSearchOption === "restaurantOption") {
         fetchYelpData();
     } else if (currentSearchOption === "recipesOption") {
+        loadData();
         recipeData();
         setMasonry();
-        // setMagnific();
     }
 })
 

@@ -40,14 +40,24 @@ function recipeData() {
     });
 }
 
+function loadData() {
+    console.log($("#recipesOption #table"));
+
+    
+    $("#recipesOption #table").hide();
+   $("#recipesOption #table").before('<div class="loader">');
+    
+
+}
+
 function setMasonry() {
     setTimeout(function () {
+        $(".loader").remove();
+        $("#recipesOption #table").fadeIn(300);
         $('.recipe-table').masonry({
-
             itemSelector: '.box',
         });
     }, 5000);
-
 }
 
 $(document).on('click', '.recipe-click-button', function () {
