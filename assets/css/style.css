@@ -23,7 +23,12 @@ Header {
     flex-direction: row;
     justify-content: center;
 }
+ h2 {
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    color: rgb(45, 8, 80);
 
+ }
 #selectedLocation {
     color: white;
     text-transform: capitalize;
