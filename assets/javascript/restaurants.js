@@ -23,7 +23,7 @@ function fetchYelpData() {
             var cardBody = $('<div class="card-body">');
             var cardTitle = $('<h5 class="card-title">' + data.businesses[i].name + '</h5>');
             var cardSubtitle = $('<p><span>' + data.businesses[i].location.city + '</span><span class="float-right">' + (data.businesses[i].distance / 1000).toFixed(2) + ' km</span></p>');
-            var cardButton = $('<button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapseOne">Show me more!</button>');
+            var cardButton = $('<button class="btn btn-warning showMeMore" type="button" data-toggle="collapse" data-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapseOne">Show me more!</button>');
             var accordionDiv = $('<div id="collapse' + i + '" class="collapse" aria-labelledby="headingOne" data-parent="#restaurantCard">');
             var accordionContent = $('<div class="card-body">');
             var yelpSite = $('<a href="' + data.businesses[i].url + '">' + data.businesses[i].name + '</a>');
@@ -43,11 +43,14 @@ function fetchYelpData() {
             $(cardBody).append(accordionDiv);
             $(cardDiv).append(cardImg);
             $(cardDiv).append(cardBody);
-
+            setRestaurantMasonry();
         }
         console.log("1");
     });
 }
+
+
+$(document).on("click", ".showMeMore", setRestaurantMasonry);
 
 function loadRestaurantData() {
     console.log($(".restaurantResults"));
@@ -55,13 +58,12 @@ function loadRestaurantData() {
     $(".restaurantResults").hide();
     $(".restaurantResults").before('<div class="loader">');
 
-
 }
 
 function setRestaurantMasonry() {
+    $(".restaurantResults").fadeIn(500);
     setTimeout(function () {
         $(".loader").remove();
-        $(".restaurantResults").fadeIn(500);
         $('.restaurantResults').masonry({
             itemSelector: '',
         });
