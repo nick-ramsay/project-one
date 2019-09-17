@@ -9,7 +9,7 @@ Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 100px;
-    color: rgb(219, 215, 215);
+    color: lightgray;
 }
 
 .findHeading {
@@ -55,4 +55,16 @@ Header {
 
 .mfp-inline-holder {
     background-color: black;
+}
+
+.btn-custom {
+
+background-color:#6A6A6A;
+color:white;
+}
+
+#submit {
+ background-color:  rgb(247, 247, 92);
+ color: #6A6A6A;
+ border: none;
 }
