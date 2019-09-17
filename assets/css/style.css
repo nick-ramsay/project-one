@@ -24,8 +24,14 @@ h1 {
     justify-content: center;
 }
 
-.serchTypeButtom {
-    background-color: goldenrod;
+#selectedLocation {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#changeLocation, #locationField, #submit {
+    text-align: center;
 }
 
 .box {

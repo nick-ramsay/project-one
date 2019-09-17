@@ -54,30 +54,31 @@
         </label>
       </div>
     </div>
-
+  </br>
     <div class="searchOptions" id="restaurantOption" style="display: none;">
-      <h1>Find a Restaurant Near You</h1>
+      <h1>Find a Restaurant</h1>
+
       <div class="input-group input-group-lg container">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-lg">Find Food:</span>
+          <span class="input-group-text" id="inputGroup-sizing-lg">Let's Go Eat:</span>
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg" id="userInput">
+          aria-describedby="inputGroup-sizing-lg" id="userInput" placeholder="e.g. chinese, pizza, burgers...">
       </div>
-      <h6 style="color:white; text-transform:capitalize;" id="selectedLocation" align="center"></h6>
-      <div class="col-md-12" align="center">
+      <h6 id="selectedLocation"></h6>
+      <div class="col-md-12">
         <div id="changeLocation">
-          <button type="button" class="btn btn-danger btn-sm" id="changeLocationBtn">
+          <button type="button" class="btn btn-success btn-sm" id="changeLocationBtn">
             Change Location
           </button>
         </div>
         <div id="locationParameters" style="display: none;">
           <div class="locationInput m-1" id="locationField">
             <input id="autocomplete" placeholder="Enter your address" type="text" />
+            <button type="button" class="btn btn-dark btn-sm m-1 closeLocationParameters" id="closeLocation">
+              Close
+            </button>
           </div>
-          <button type="button" class="btn btn-danger btn-sm m-1 closeLocationParameters" id="closeLocation">
-            Close
-          </button>
         </div>
       </div>
     </br>
@@ -104,7 +105,7 @@
         </div>
       </div>
     </div>
-  </div> </br>
+  </div>
 </div>
 
   <div class="searchOptions" id="recipesOption">
@@ -116,14 +117,14 @@
       <div class="container">
         <div class="input-group input-group-lg">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-lg">Search for recipes based on your
-              ingredients</span>
+            <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
           </div>
           <input type="text" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
         </div>
         </br>
-        <div class="dropdown">
+
+        <div class="btn-group dropdown" role="group" aria-label="Basic example">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Dietary Requirements
@@ -135,9 +136,7 @@
             <a class="dropdown-item" id="high" href="#">Dairy Free</a>
             <a class="dropdown-item" id="high" href="#">Gluten free</a>
           </div>
-        </div>
-        </br>
-        <div class="dropdown">
+
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Meal Type
@@ -149,7 +148,7 @@
             <a class="dropdown-item" id="high" href="#">Snack</a>
             <a class="dropdown-item" id="high" href="#">Dessert</a>
           </div>
-        </div>
+      </div>
         <div class="container">
           <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
         </div>
