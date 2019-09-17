@@ -84,7 +84,7 @@ background-color:#6A6A6A;
 color:white;
 }
 
-#submit {
+#submit, button {
     font-family: 'Kalam', cursive;
     font-weight: bold;
     color: rgb(45, 8, 80);
