@@ -12,12 +12,20 @@ Header {
     color: rgb(45, 8, 80);
 }
 
+.input-group-text, .dropdown-toggle, .btn-success {
+font-family: cursive;
+}
+
+.input-group-text {
+    color: rgb(45, 8, 80);
+}
+
 .findHeading, h5, p, address {
     font-family: 'Lobster', cursive;
     color: rgb(45, 8, 80)
 }
 
-a {
+.yelpSite {
     font-family: 'Lobster', cursive;
     text-decoration: underline; 
 }
@@ -35,6 +43,7 @@ a {
  }
 
 #selectedLocation {
+    font-family: cursive;
     color:  rgb(45, 8, 80);
     text-transform: capitalize;
     text-align: center;
@@ -53,10 +62,6 @@ a {
     display: none;
 }
 
-.recipe-details {
-    color: white;
-    text-align: center;
-}
 
 .mfp-inline-holder {
     background-color: black;
@@ -71,22 +76,22 @@ a {
     -webkit-animation: spin 1s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
     margin: auto;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
+}
+
+/* Safari */
+@-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-.btn-custom {
+}
 
-background-color:#6A6A6A;
-color:white;
+.btn-custom {
+    background-color:#6A6A6A;
+    color:white;
 }
 
 .btn-warning {
@@ -101,4 +106,14 @@ color:white;
 
 .card-body {
     background-color: #a7a4a4
+}
+
+.recipe-details {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+ {
+
 }
