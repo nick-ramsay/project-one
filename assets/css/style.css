@@ -12,9 +12,14 @@ Header {
     color: rgb(45, 8, 80);
 }
 
-.findHeading {
+.findHeading, h5, p, address {
     font-family: 'Lobster', cursive;
     color: rgb(45, 8, 80)
+}
+
+a {
+    font-family: 'Lobster', cursive;
+    text-decoration: underline; 
 }
 
 .radioChoice {
@@ -84,9 +89,16 @@ background-color:#6A6A6A;
 color:white;
 }
 
-#submit, button {
+.btn-warning {
     font-family: 'Kalam', cursive;
-    font-weight: bold;
     color: rgb(45, 8, 80);
     border: none;
+}
+
+#submit {
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #a7a4a4
 }
