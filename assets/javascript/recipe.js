@@ -14,9 +14,9 @@ function recipeData() {
             var recipeImg = $('<img src="' + response.hits[i].recipe.image + '" alt="' + response.hits[i].recipe.label + '"class="card-img-top">');
             var modalImg = $('<img src="' + response.hits[i].recipe.image + '" alt="' + response.hits[i].recipe.label + '"style="width:250px"">');
             var recipeBody = $('<div class="card-body">');
-            var recipeTitle = $('<h1 class="card-title">' + response.hits[i].recipe.label + '</h1>');
+            var recipeTitle = $('<h5 class="card-title">' + response.hits[i].recipe.label + '</h5>');
             var modalTitle = $('<h1 class="card-title">' + response.hits[i].recipe.label + '</h1>');
-            var recipeCal = $('<h2 class="card-title">Calories: ' + Math.round(response.hits[i].recipe.calories) + '</h2>');
+            var recipeCal = $('<p><span>Calories: ' + Math.round(response.hits[i].recipe.calories) + '</span></p>');
             var modalCal = $('<h2 class="card-title">Calories: ' + Math.round(response.hits[i].recipe.calories) + '</h2>');
             var recipeButton = $('<button class="btn btn-warning recipe-click-button" type="button">More Details</button>');
             var recipeContent = $('<div class="card-body recipe-details">');
