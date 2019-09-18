@@ -36,15 +36,16 @@ font-family: cursive;
     flex-direction: row;
     justify-content: center;
 }
+
  h2 {
     font-family: 'Kalam', cursive;
     font-weight: bold;
     color: rgb(45, 8, 80);
- }
+}
 
 #selectedLocation {
     font-family: cursive;
-    color:  rgb(45, 8, 80);
+    color: rgb(45, 8, 80);
     text-transform: capitalize;
     text-align: center;
 }
@@ -70,7 +71,7 @@ font-family: cursive;
 .loader {
     border: 16px solid rgb(45, 8, 80);
     border-radius: 50%;
-    border-top: 16px solid  yellow;
+    border-top: 16px solid yellow;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -112,8 +113,4 @@ font-family: cursive;
     background-color: black;
     color: white;
     text-align: center;
-}
-
- {
-
 }
