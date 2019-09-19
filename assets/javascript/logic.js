@@ -18,6 +18,7 @@ $(document).on("click", ".priceOption", function () {
 
 $(document).on("click", "#submit", function () {
     $("#table").empty();
+    $("#restaurantContainer").empty();
 
     //Start: restaurant search code...
     if ($("#userInput").val() !== "") {
@@ -34,7 +35,9 @@ $(document).on("click", "#submit", function () {
 
     //END: restaurant search code...
     if (currentSearchOption === "restaurantOption") {
+        loadRestaurantData();
         fetchYelpData();
+        setRestaurantMasonry();
     } else if (currentSearchOption === "recipesOption") {
         loadData();
         recipeData();

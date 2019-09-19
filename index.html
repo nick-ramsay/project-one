@@ -20,7 +20,7 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Kalam&display=swap" rel="stylesheet">
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -35,7 +35,8 @@
   <script src="assets/javascript/recipe.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- Google maps (has to be on bottom) -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE&libraries=places&callback=initAutocomplete"
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsqWQiU-SIFRi7Sd4HVtu5qDpwXq4KYE&libraries=places&callback=initAutocomplete"
     async defer></script>
   <title>Let's Eat!</title>
 </head>
@@ -50,16 +51,20 @@
         <label class="btn btn-outline-warning">
           <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="restaurantOption" src="assets/images/restaurants.jpg" alt="Resturant" />
+          </br>
+          <h2>Restaurants</h2>
         </label>
         <label class="btn btn-outline-warning">
           <input type="radio" name="cook" autocomplete="off"><img class="searchTypeButton"
             data-search-option="recipesOption" src="assets/images/recipes.png" alt="Recipes" />
+          </br>
+          <h2>Recipes</h2>
         </label>
       </div>
     </div>
-  </br>
+    </br>
 
-  <!-- Restaurant input field -->
+    <!-- Restaurant input field -->
     <div class="searchOptions" id="restaurantOption" style="display: none;">
       <h1 class="findHeading">Find a Restaurant</h1>
 
@@ -71,7 +76,7 @@
           aria-describedby="inputGroup-sizing-lg" id="userInput" placeholder="e.g. chinese, pizza, burgers...">
       </div>
       <div class="col-md-12">
-          <h6 id="selectedLocation"></h6>
+        <h6 id="selectedLocation"></h6>
         <div id="changeLocation">
           <button type="button" class="btn btn-success btn-sm" id="changeLocationBtn">
             Change Location
@@ -81,110 +86,105 @@
           <div class="locationInput m-1" id="locationField">
             <input id="autocomplete" placeholder="Enter your address" type="text" />
             <button type="button" class="btn btn-dark btn-sm m-1 closeLocationParameters" id="closeLocation">
-              Close
+              Cancel
             </button>
           </div>
         </div>
       </div>
-    </br>
-    <div class="container">
-        <div class="btn-group dropdown" role="group" aria-label="Basic example">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            What's your budget?
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item priceOption" id="low" href="#" data-price=1>$</a>
-            <a class="dropdown-item priceOption" id="medium" href="#" data-price=2>$$</a>
-            <a class="dropdown-item priceOption" id="high" href="#" data-price=3>$$$</a>
-            <a class="dropdown-item priceOption" id="very high" href="#" data-price=4>$$$$</a>
-          </div>
-
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              How far do you want to travel?
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id = "low" href="#"> less than 1km</a>
-            <a class="dropdown-item" id = "medium" href="#">1km - 3km</a>
-            <a class="dropdown-item" id = "high" href="#">3km+</a>
-          </div>
-        </div>
       </br>
-      <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="restaurantResults">
+      <div class="container">
 
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          What's your budget?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item priceOption" id="low" href="#" data-price=1>$</a>
+          <a class="dropdown-item priceOption" id="medium" href="#" data-price=2>$$</a>
+          <a class="dropdown-item priceOption" id="high" href="#" data-price=3>$$$</a>
+          <a class="dropdown-item priceOption" id="very high" href="#" data-price=4>$$$$</a>
+        </div>
+
+
+        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            How far do you want to travel?
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="low" href="#"> less than 1km</a>
+            <a class="dropdown-item" id="medium" href="#">1km - 3km</a>
+            <a class="dropdown-item" id="high" href="#">3km+</a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Recipe input fields  -->
-  <div class="searchOptions" id="recipesOption" style="display: none;">
-    <div class="container">
-      <h1 class="findHeading"> Find a Recipe</h1>
-    </div>
-
-
+      </br>
       <div class="container">
-        <div class="input-group input-group-lg">
+        <button type="button" class="btn btn-warning btn-lg" id="submit">Search</button>
+      </div>
+      <div class="container">
+        <div id="restaurantContainer"></div>
+      </div>
+    </div>
+    
+    <!-- Recipe input fields  -->
+    <div class="searchOptions" id="recipesOption" style="display: none;">
+        <h1 class="findHeading"> Find a Recipe</h1>
+        
+        <div class="input-group input-group-lg container">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
           </div>
           <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
+          aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
         </div>
-        </br>
-
-        <div class="btn-group dropdown" role="group" aria-label="Basic example">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dietary Requirements
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id="low" href="#">Vegetarian</a>
-            <a class="dropdown-item" id="medium" href="#">Vegan</a>
-            <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
-            <a class="dropdown-item" id="high" href="#">Dairy Free</a>
-            <a class="dropdown-item" id="high" href="#">Gluten free</a>
-          </div>
-
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Meal Type
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id="low" href="#">Breakfast</a>
-            <a class="dropdown-item" id="medium" href="#">Lunch</a>
-            <a class="dropdown-item" id="medium" href="#">Dinner</a>
-            <a class="dropdown-item" id="high" href="#">Snack</a>
-            <a class="dropdown-item" id="high" href="#">Dessert</a>
-          </div>
-      </div>
-        <div class="container">
-          <button type="button" class="btn btn-danger btn-lg" id="submit">Search</button>
-        </div>
-
-        <div class="container">
-
-          <div id="table">
-
-          </div>
-        </div>
-        <div id="recipeModal" class="mfp-hide white-popup-block">
-            <!-- <p><span id="recipeDetails"></span></p>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
-        </div>
-      </div>
       </br>
-
-
-
+      <div class="container">
+        
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dietary Requirements
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" id="low" href="#">Vegetarian</a>
+        <a class="dropdown-item" id="medium" href="#">Vegan</a>
+        <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
+        <a class="dropdown-item" id="high" href="#">Dairy Free</a>
+        <a class="dropdown-item" id="high" href="#">Gluten free</a>
+      </div>
+      
+      
+      <div class="btn-group dropdown" role="group" aria-label="Basic example">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Meal Type
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" id="low" href="#">Breakfast</a>
+        <a class="dropdown-item" id="medium" href="#">Lunch</a>
+        <a class="dropdown-item" id="medium" href="#">Dinner</a>
+        <a class="dropdown-item" id="high" href="#">Snack</a>
+        <a class="dropdown-item" id="high" href="#">Dessert</a>
+      </div>
     </div>
-    </body>
+  </div>
+</br>
+<div class="container">
+  <button type="button" class="btn btn-warning btn-lg" id="submit">Search</button>
+</div>
+<div class="container">
+  <div id="table">
+  </div>
+</div>
 
+<div id="recipeModal" class="mfp-hide white-popup-block">
+  <!-- <p><span id="recipeDetails"></span></p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+  </div>
+</div>
+</br>
+</div>
+</div>
+</body>
 
 </html>

@@ -14,14 +14,14 @@ function recipeData() {
             var recipeImg = $('<img src="' + response.hits[i].recipe.image + '" alt="' + response.hits[i].recipe.label + '"class="card-img-top">');
             var modalImg = $('<img src="' + response.hits[i].recipe.image + '" alt="' + response.hits[i].recipe.label + '"style="width:250px"">');
             var recipeBody = $('<div class="card-body">');
-            var recipeTitle = $('<h1 class="card-title">' + response.hits[i].recipe.label + '</h1>');
+            var recipeTitle = $('<h5 class="card-title">' + response.hits[i].recipe.label + '</h5>');
             var modalTitle = $('<h1 class="card-title">' + response.hits[i].recipe.label + '</h1>');
-            var recipeCal = $('<h2 class="card-title">Calories: ' + Math.round(response.hits[i].recipe.calories) + '</h2>');
-            var modalCal = $('<h2 class="card-title">Calories: ' + Math.round(response.hits[i].recipe.calories) + '</h2>');
-            var recipeButton = $('<button class="btn btn-primary recipe-click-button" type="button">More Details</button>');
+            var recipeCal = $('<p><span>Calories: ' + Math.round(response.hits[i].recipe.calories) + '</span></p>');
+            var modalCal = $('<h3 class="card-title">Calories: ' + Math.round(response.hits[i].recipe.calories) + '</h3>');
+            var recipeButton = $('<button class="btn btn-warning recipe-click-button" type="button">More Details</button>');
             var recipeContent = $('<div class="card-body recipe-details">');
-            var recipehealth = $('<h5>Health Label: ' + response.hits[i].recipe.healthLabels + '</h5>');
-            var recipeIngredients = $('<p>Ingredients: ' + response.hits[i].recipe.ingredientLines + '</p>');
+            var recipehealth = $('<h5 class="modalHealth">Health Label: ' + response.hits[i].recipe.healthLabels + '</h5>');
+            var recipeIngredients = $('<p class="modalIngredients">Ingredients: ' + response.hits[i].recipe.ingredientLines + '</p>');
             var modalButton = $('<a href="' + response.hits[i].recipe.url + '" target="_blank"><button class="btn btn-primary modal-more-info" type="button">More Info</button></a>');
             $(cardRecipeDiv).append(cardRecipe);
             $(cardRecipe).append(recipeImg);
@@ -36,20 +36,13 @@ function recipeData() {
             $(recipeContent).append(recipehealth);
             $(recipeContent).append(recipeIngredients);
             $(recipeContent).append(modalButton);
-
         }
-        
     });
 }
 
 function loadData() {
-    console.log($("#recipesOption #table"));
-
-    
     $("#recipesOption #table").hide();
-   $("#recipesOption #table").before('<div class="loader">');
-    
-
+    $("#recipesOption #table").before('<div class="loader">');
 }
 
 function setMasonry() {

@@ -9,12 +9,25 @@ Header {
     text-align: center;
     font-family: 'Pacifico', cursive;
     font-size: 100px;
-    color: lightgray;
+    color: rgb(45, 8, 80);
 }
 
-.findHeading {
+.input-group-text, .dropdown-toggle, .btn-success {
+font-family: cursive;
+}
+
+.input-group-text {
+    color: rgb(45, 8, 80);
+}
+
+.findHeading, h5, p, address {
     font-family: 'Lobster', cursive;
-    color: rgb(247, 247, 92);
+    color: rgb(45, 8, 80)
+}
+
+.yelpSite {
+    font-family: 'Lobster', cursive;
+    text-decoration: underline; 
 }
 
 .radioChoice {
@@ -23,14 +36,16 @@ Header {
     flex-direction: row;
     justify-content: center;
 }
+
  h2 {
     font-family: 'Kalam', cursive;
     font-weight: bold;
     color: rgb(45, 8, 80);
- }
+}
 
 #selectedLocation {
-    color: white;
+    font-family: cursive;
+    color: rgb(45, 8, 80);
     text-transform: capitalize;
     text-align: center;
 }
@@ -48,45 +63,63 @@ Header {
     display: none;
 }
 
-.recipe-details {
-    color: white;
-    text-align: center;
-}
 
 .mfp-inline-holder {
     background-color: black;
 }
 
 .loader {
-    border: 16px solid #f3f3f3;
+    border: 16px solid rgb(45, 8, 80);
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid yellow;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 1s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
     margin: auto;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
+}
+
+/* Safari */
+@-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-.btn-custom {
+}
 
-background-color:#6A6A6A;
-color:white;
+.btn-custom {
+    background-color:#6A6A6A;
+    color:white;
+}
+
+.btn-warning {
+    font-family: 'Kalam', cursive;
+    color: rgb(45, 8, 80);
+    border: none;
 }
 
 #submit {
- background-color:  rgb(247, 247, 92);
- color: #6A6A6A;
- border: none;
- font-weight: bold;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #a7a4a4
+}
+
+.recipe-details {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.modalIngredients, .modalHealth {
+    color: cyan;
+    font-family: cursive;
+}
+
+.btn {
+    cursor: pointer;
 }
