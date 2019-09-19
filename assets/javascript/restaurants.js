@@ -85,7 +85,9 @@ function setRestaurantMasonry() {
         $(".loader").remove();
         $("#restaurantOption #restaurantContainer").fadeIn(500);
         $("#restaurantResults").masonry({
-            itemSelector: '.restaurantCard',
+            itemSelector: '.restaurantCard'
+            //columnWidth: 100,
+            //fitWidth: true
         });
     }, 5000);
 }
