@@ -37,6 +37,10 @@ $(document).on("click", "#submit", function () {
         if (priceFilter !== undefined) {
             restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
         }
+
+        if (radius !== undefined) {
+            restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
+        }
     
         //END: restaurant search code...
         if (currentSearchOption === "restaurantOption") {
@@ -54,27 +58,6 @@ $(document).on("click", "#submit", function () {
         $("#userInput").css("border-color","red");
     }
 
-    restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
-
-    if (priceFilter !== undefined) {
-        restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
-    }
-
-    if (radius !== undefined) {
-        restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
-    }
-
-
-    //END: restaurant search code...
-    if (currentSearchOption === "restaurantOption") {
-        loadRestaurantData();
-        fetchYelpData();
-        setRestaurantMasonry();
-    } else if (currentSearchOption === "recipesOption") {
-        loadData();
-        recipeData();
-        setMasonry();
-    }
 })
 
 function getLocation() {
