@@ -17,6 +17,9 @@ function fetchYelpData() {
         method: 'GET',
         dataType: 'json'
     }).then(function (data) {
+        var restaurantResults = $('<div id="restaurantResults">');
+        $("#restaurantContainer").append(restaurantResults);
+        console.log("then AJAX");
         for (i = 0; i < data.businesses.length; i++) {
             var cardDiv = $('<div id="restaurantCard" class="card m-1 restaurantCard" style="width: 18rem; float:left;">');
             var cardImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '"class="card-img-top">');
@@ -43,7 +46,7 @@ function fetchYelpData() {
             var streetAddress = $('<address><br>' + data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + ' ' + data.businesses[i].location.zip_code + '</address>');
             var restaurantPhone = $('<p>Phone: ' + data.businesses[i].display_phone + '</p>');
 
-            $(".restaurantResults").append(cardDiv);
+            $(restaurantResults).append(cardDiv);
             $(cardBody).append(cardTitle);
             $(cardBody).append(cardSubtitle);
             $(cardBody).append(cardButton);
@@ -72,18 +75,16 @@ function fetchYelpData() {
 }
 
 function loadRestaurantData() {
-    console.log($(".restaurantResults"));
-
-    $(".restaurantResults").hide();
-    $(".restaurantResults").before('<div class="loader">');
+    $("#restaurantOption #restaurantContainer").hide();
+    $("#restaurantOption #restaurantContainer").before('<div class="loader">');
 
 }
 
 function setRestaurantMasonry() {
     setTimeout(function () {
         $(".loader").remove();
-        $(".restaurantResults").fadeIn(500);
-        $(".restaurantResults").masonry({
+        $("#restaurantOption #restaurantContainer").fadeIn(500);
+        $("#restaurantResults").masonry({
             itemSelector: '.restaurantCard',
         });
     }, 5000);
