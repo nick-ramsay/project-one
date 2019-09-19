@@ -114,3 +114,8 @@ font-family: cursive;
     color: white;
     text-align: center;
 }
+
+.modalIngredients, .modalHealth {
+    color: cyan;
+    font-family: cursive;
+}
