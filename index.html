@@ -123,77 +123,68 @@
         <button type="button" class="btn btn-warning btn-lg" id="submit">Search</button>
       </div>
       <div class="container">
-        <div class="col-md-12 restaurantResults"></div>
+        <div id="restaurantContainer"></div>
       </div>
     </div>
-  </div>
-
-  <!-- Recipe input fields  -->
-  <div class="searchOptions" id="recipesOption" style="display: none;">
-    <div class="container">
-      <h1 class="findHeading"> Find a Recipe</h1>
-    </div>
-
-
-    <div class="container">
-      <div class="input-group input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Sizing example input"
+    
+    <!-- Recipe input fields  -->
+    <div class="searchOptions" id="recipesOption" style="display: none;">
+        <h1 class="findHeading"> Find a Recipe</h1>
+        
+        <div class="input-group input-group-lg container">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
-      </div>
+        </div>
       </br>
-
+      <div class="container">
+        
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dietary Requirements
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" id="low" href="#">Vegetarian</a>
+        <a class="dropdown-item" id="medium" href="#">Vegan</a>
+        <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
+        <a class="dropdown-item" id="high" href="#">Dairy Free</a>
+        <a class="dropdown-item" id="high" href="#">Gluten free</a>
+      </div>
+      
+      
       <div class="btn-group dropdown" role="group" aria-label="Basic example">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dietary Requirements
-        </button>
-        <div class="dropdown-menu diet" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" id="low" href="#">Vegetarian</a>
-          <a class="dropdown-item" id="medium" href="#">Vegan</a>
-          <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
-          <a class="dropdown-item" id="high" href="#">Dairy Free</a>
-          <a class="dropdown-item" id="high" href="#">Gluten free</a>
-        </div>
+        aria-haspopup="true" aria-expanded="false">
+        Meal Type
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" id="low" href="#">Breakfast</a>
+        <a class="dropdown-item" id="medium" href="#">Lunch</a>
+        <a class="dropdown-item" id="medium" href="#">Dinner</a>
+        <a class="dropdown-item" id="high" href="#">Snack</a>
+        <a class="dropdown-item" id="high" href="#">Dessert</a>
       </div>
-      <div class="btn-group dropdown" role="group" aria-label="Basic example">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Meal Type
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" id="low" href="#">Breakfast</a>
-          <a class="dropdown-item" id="medium" href="#">Lunch</a>
-          <a class="dropdown-item" id="medium" href="#">Dinner</a>
-          <a class="dropdown-item" id="high" href="#">Snack</a>
-          <a class="dropdown-item" id="high" href="#">Dessert</a>
-        </div>
-      </div>
-    </div>
-    </br>
-    <div class="container">
-      <button type="button" class="btn btn-warning btn-lg" id="submit">Search</button>
-    </div>
-
-    <div class="container">
-
-      <div id="table">
-
-      </div>
-    </div>
-    <div id="recipeModal" class="mfp-hide white-popup-block">
-      <!-- <p><span id="recipeDetails"></span></p>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
     </div>
   </div>
-  </br>
-
-
-
+</br>
+<div class="container">
+  <button type="button" class="btn btn-warning btn-lg" id="submit">Search</button>
+</div>
+<div class="container">
+  <div id="table">
   </div>
+</div>
+
+<div id="recipeModal" class="mfp-hide white-popup-block">
+  <!-- <p><span id="recipeDetails"></span></p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+  </div>
+</div>
+</br>
+</div>
+</div>
 </body>
-
 
 </html>

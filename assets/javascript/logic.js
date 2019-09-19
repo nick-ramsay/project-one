@@ -18,7 +18,7 @@ $(document).on("click", ".priceOption", function () {
 
 $(document).on("click", "#submit", function () {
     $("#table").empty();
-    $(".restaurantResults").empty();
+    $("#restaurantContainer").empty();
 
     //Start: restaurant search code...
     if ($("#userInput").val() !== "") {
