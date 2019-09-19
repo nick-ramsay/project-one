@@ -119,3 +119,7 @@ font-family: cursive;
     color: cyan;
     font-family: cursive;
 }
+
+.btn {
+    cursor: pointer;
+}
