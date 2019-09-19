@@ -19,7 +19,7 @@ function fetchYelpData() {
     }).then(function (data) {
         var restaurantResults = $('<div id="restaurantResults">');
         $("#restaurantContainer").append(restaurantResults);
-        console.log("then AJAX");
+        console.log(data);
         for (i = 0; i < data.businesses.length; i++) {
             var cardDiv = $('<div id="restaurantCard" class="card m-1 restaurantCard" style="width: 18rem; float:left;">');
             var cardImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '"class="card-img-top">');
@@ -41,7 +41,7 @@ function fetchYelpData() {
             var restaurantModalFooter = $('<div class="modal-footer">');
             
             var yelpImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '" class="img-thumbnail" style="width:50%; height:50%;">');
-            var yelpSite = $('<a class="yelpSite" href="' + data.businesses[i].url + '">' + data.businesses[i].name + '</a>');
+            var yelpSite = $('<a class="yelpSite" href="' + data.businesses[i].url + '" target="_blank">' + data.businesses[i].name + '</a>');
             var priceRating = $('<p>' + data.businesses[i].price + '</p>');
             var streetAddress = $('<address><br>' + data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + ' ' + data.businesses[i].location.zip_code + '</address>');
             var restaurantPhone = $('<p>Phone: ' + data.businesses[i].display_phone + '</p>');

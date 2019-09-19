@@ -11,38 +11,53 @@ $(document).on("click", ".searchTypeButton", function () {
 })
 
 var priceFilter;
+var radius;
 
 $(document).on("click", ".priceOption", function () {
     priceFilter = $(this).attr("data-price");
 }) //Set's price filter variable
 
+$(document).on("click", ".radius", function () {
+    radius = $(this).attr("data-radius");
+    console.log(radius);
+}) //Set's filter for max radius in meters from current location
+
 $(document).on("click", "#submit", function () {
     $("#table").empty();
     $("#restaurantContainer").empty();
+    $("#userInput").attr("placeholder","e.g. chinese, pizza, burgers...");
+    $("#userInput").removeAttr("style");
 
     //Start: restaurant search code...
     if ($("#userInput").val() !== "") {
         restaurantSearchInput = $("#userInput").val();
+        
+        restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
+
+        if (priceFilter !== undefined) {
+            restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
+        }
+
+        if (radius !== undefined) {
+            restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
+        }
+    
+        //END: restaurant search code...
+        if (currentSearchOption === "restaurantOption") {
+            loadRestaurantData();
+            fetchYelpData();
+            setRestaurantMasonry();
+        } else if (currentSearchOption === "recipesOption") {
+            loadData();
+            recipeData();
+            setMasonry();
+        }
     } else {
         restaurantSearchInput = "food";
+        $("#userInput").attr("placeholder","Please enter a value");
+        $("#userInput").css("border-color","red");
     }
 
-    restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
-
-    if (priceFilter !== undefined) {
-        restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
-    }
-
-    //END: restaurant search code...
-    if (currentSearchOption === "restaurantOption") {
-        loadRestaurantData();
-        fetchYelpData();
-        setRestaurantMasonry();
-    } else if (currentSearchOption === "recipesOption") {
-        loadData();
-        recipeData();
-        setMasonry();
-    }
 })
 
 function getLocation() {
