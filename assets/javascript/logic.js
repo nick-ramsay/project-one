@@ -11,10 +11,16 @@ $(document).on("click", ".searchTypeButton", function () {
 })
 
 var priceFilter;
+var radius;
 
 $(document).on("click", ".priceOption", function () {
     priceFilter = $(this).attr("data-price");
 }) //Set's price filter variable
+
+$(document).on("click", ".radius", function () {
+    radius = $(this).attr("data-radius");
+    console.log(radius);
+}) //Set's filter for max radius in meters from current location
 
 $(document).on("click", "#submit", function () {
     $("#table").empty();
@@ -32,6 +38,11 @@ $(document).on("click", "#submit", function () {
     if (priceFilter !== undefined) {
         restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
     }
+
+    if (radius !== undefined) {
+        restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
+    }
+
 
     //END: restaurant search code...
     if (currentSearchOption === "restaurantOption") {
