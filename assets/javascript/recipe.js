@@ -1,7 +1,20 @@
+var mealDiet;
+var mealType;
+
+// $(document).on("click", ".diet", function () {
+//     mealDiet = $(this).attr("data-diet");
+// }) 
+
+// $(document).on("click", ".meal-type", function () {
+//     mealType = $(this).attr("data-meal");
+// }) 
+
 function recipeData() {
+    mealDiet = $(".diet").attr("data-diet");
+    mealType = $(".meal-type").attr("data-meal");
     $("#recipesOption #table").html("");
-    var searchRecipe = $("#recipesOption #userInput").val();
-    var recipeUrl = "https://api.edamam.com/search?q=" + searchRecipe + "&app_id=cc84332e&app_key=7305bef5a7c92a751b9bfdf0b0ef0c63&from=0&to=15&calories=591-722&health=alcohol-free";
+    var searchRecipe = $("#recipesOption #recipeInput").val();
+    var recipeUrl = "https://api.edamam.com/search?q=" + searchRecipe + "&app_id=cc84332e&app_key=7305bef5a7c92a751b9bfdf0b0ef0c63&from=0&to=15&calories=591-722&health=" + mealDiet + "&mealtype=" + mealType;
     $.ajax({
         url: recipeUrl,
         method: "GET"
@@ -64,6 +77,7 @@ $(document).on('click', '.recipe-click-button', function () {
         type: 'inline'
     });
 });
+
 
 
 

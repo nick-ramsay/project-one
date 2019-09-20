@@ -26,36 +26,71 @@ $(document).on("click", "#submit", function () {
     $("#table").empty();
     $("#restaurantContainer").empty();
     $("#userInput").attr("placeholder","e.g. chinese, pizza, burgers...");
-    $("#userInput").removeAttr("style");
+    $("#recipeInput").attr("placeholder","e.g. mushrooms,garlic,chicken...");
+    $("#recipeInput").removeAttr("style");
 
-    //Start: restaurant search code...
-    if ($("#userInput").val() !== "") {
-        restaurantSearchInput = $("#userInput").val();
+    // //Start: restaurant search code...
+    // if ($("#userInput").val() !== "") {
+    //     restaurantSearchInput = $("#userInput").val();
         
-        restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
+    //     restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
 
-        if (priceFilter !== undefined) {
-            restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
-        }
+    //     if (priceFilter !== undefined) {
+    //         restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
+    //     }
 
-        if (radius !== undefined) {
-            restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
-        }
+    //     if (radius !== undefined) {
+    //         restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
+    //     }
     
-        //END: restaurant search code...
-        if (currentSearchOption === "restaurantOption") {
+    //     //END: restaurant search code...
+    //     if (currentSearchOption === "restaurantOption") {
+    //         loadRestaurantData();
+    //         fetchYelpData();
+    //         setRestaurantMasonry();
+    //     } else if (currentSearchOption === "recipesOption") {
+    //         loadData();
+    //         recipeData();
+    //         setMasonry();
+    //     }
+    // } else {
+    //     restaurantSearchInput = "food";
+    //     $("#userInput").attr("placeholder","Please enter a value");
+    //     $("#userInput").css("border-color","red");
+    // }
+
+
+    if (currentSearchOption === "restaurantOption") {
+        if ($("#userInput").val() !== "") {
+            restaurantSearchInput = $("#userInput").val();
+            
+            restaurantQueryURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term="' + restaurantSearchInput + '"&latitude=' + selectedLatitude + '&longitude=' + selectedLongitude;
+    
+            if (priceFilter !== undefined) {
+                restaurantQueryURL = restaurantQueryURL + "&price=" + priceFilter;
+            }
+    
+            if (radius !== undefined) {
+                restaurantQueryURL = restaurantQueryURL + "&radius=" + radius;
+            }
             loadRestaurantData();
             fetchYelpData();
             setRestaurantMasonry();
-        } else if (currentSearchOption === "recipesOption") {
+        }
+        else {
+            restaurantSearchInput = "food";
+            $("#userInput").attr("placeholder","Please enter a value");
+            $("#userInput").css("border-color","red");
+        }
+    } else if (currentSearchOption === "recipesOption") {
+        if ($("#recipeInput").val() !== "") {
             loadData();
             recipeData();
             setMasonry();
+        } else {
+            $("#recipeInput").attr("placeholder","Please enter a value");
+            $("#recipeInput").css("border-color","red");
         }
-    } else {
-        restaurantSearchInput = "food";
-        $("#userInput").attr("placeholder","Please enter a value");
-        $("#userInput").css("border-color","red");
     }
 
 })
@@ -89,3 +124,4 @@ function currentLocation(position) {
 
     selectedLocation();
 }
+

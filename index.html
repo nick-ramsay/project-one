@@ -136,7 +136,7 @@
             <span class="input-group-text" id="inputGroup-sizing-lg">Let's Cook With:</span>
           </div>
           <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="userInput">
+          aria-describedby="inputGroup-sizing-lg" placeholder="e.g. mushrooms, garlic, chicken..." id="recipeInput">
         </div>
       </br>
       <div class="container">
@@ -146,11 +146,11 @@
         Dietary Requirements
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item " id="low" href="#">Vegetarian</a>
-        <a class="dropdown-item" id="medium" href="#">Vegan</a>
-        <a class="dropdown-item" id="medium" href="#">Pescatarian</a>
-        <a class="dropdown-item" id="high" href="#">Dairy Free</a>
-        <a class="dropdown-item" id="high" href="#">Gluten free</a>
+        <a class="dropdown-item diet" id="low" href="#" data-diet=vegetarian>Vegetarian</a>
+        <a class="dropdown-item diet" id="medium" href="#"data-diet=vegan>Vegan</a>
+        <a class="dropdown-item diet" id="medium" href="#" data-diet=Pescatarian>Pescatarian</a>
+        <a class="dropdown-item diet" id="high" href="#" data-diet=DairyFree>Dairy Free</a>
+        <a class="dropdown-item diet" id="high" href="#" data-diet=Glutenfree>Gluten free</a>
       </div>
       
       
@@ -160,11 +160,11 @@
         Meal Type
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="low" href="#">Breakfast</a>
-        <a class="dropdown-item" id="medium" href="#">Lunch</a>
-        <a class="dropdown-item" id="medium" href="#">Dinner</a>
-        <a class="dropdown-item" id="high" href="#">Snack</a>
-        <a class="dropdown-item" id="high" href="#">Dessert</a>
+        <a class="dropdown-item meal-type" id="low" href="#" data-meal=breakfast>Breakfast</a>
+        <a class="dropdown-item meal-type" id="medium" href="#" data-meal=Lunch>Lunch</a>
+        <a class="dropdown-item meal-type" id="medium" href="#" data-meal=Dinner>Dinner</a>
+        <a class="dropdown-item meal-type" id="high" href="#" data-meal=Snack>Snack</a>
+        <a class="dropdown-item meal-type" id="high" href="#" data-meal=Dessert>Dessert</a>
       </div>
     </div>
   </div>
