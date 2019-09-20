@@ -110,7 +110,7 @@ font-family: cursive;
     background-color: #a7a4a4
 }
 
-.recipe-details, .mfp-container {
+.recipe-details, .restaurantDetails, .mfp-container {
     background-color: transparent;
     color: white;
     text-align: center;
@@ -121,7 +121,11 @@ font-family: cursive;
     font-family: cursive;
 }
 
-.resultName, .mfp-close {
+.restModalInfo {
+    line-height: 1.6;
+}
+
+.resultName, .mfp-close, .restModalTitle {
     color: yellow;
     font-family: 'Lobster', cursive;
 }
