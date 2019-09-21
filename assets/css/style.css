@@ -130,7 +130,12 @@ font-family: cursive;
     color: yellow;
     font-family: 'Lobster', cursive;
 }
+
 .btn {
     cursor: pointer;
+}
+
+.modalIngredients {
+    margin: 70px;
 }
 
