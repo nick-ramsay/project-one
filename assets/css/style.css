@@ -1,5 +1,6 @@
 html, body {
     background-image: url("../../assets/images/background.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -109,17 +110,26 @@ font-family: cursive;
     background-color: #a7a4a4
 }
 
-.recipe-details {
-    background-color: black;
+.recipe-details, .restaurantDetails, .mfp-container {
+    background-color: transparent;
     color: white;
     text-align: center;
 }
 
-.modalIngredients, .modalHealth {
-    color: cyan;
+.mfp-close-btn-in .mfp-close, .modalIngredients, .modalHealth, h3 {
+    color: whitesmoke;
     font-family: cursive;
 }
 
+.restModalInfo {
+    line-height: 1.6;
+}
+
+.resultName, .mfp-close, .restModalTitle {
+    color: yellow;
+    font-family: 'Lobster', cursive;
+}
 .btn {
     cursor: pointer;
 }
+
