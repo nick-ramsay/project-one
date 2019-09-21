@@ -37,13 +37,13 @@ function fetchYelpData() {
             } else {
                 pluralReviews = "";
             }
-            var restModalReviews = $('<p style="color: whitesmoke; font-family: cursive;">' + data.businesses[i].review_count + ' review' + pluralReviews + ' for average of ' + data.businesses[i].rating + ' stars</p>')
+            var restModalReviews = $('<p class="review">' + data.businesses[i].review_count + ' review' + pluralReviews + ' for average of ' + data.businesses[i].rating + ' stars</p>')
             var yelpImg = $('<img src="' + data.businesses[i].image_url + '" alt="' + data.businesses[i].name + '" class="img-thumbnail" style="width:30%; height:30%;">');
             var restModalInfo = $('<div class="restModalInfo">');
-            var yelpSite = $('<a style="color: whitesmoke; font-family: cursive;" class="yelpSite" href="' + data.businesses[i].url + '" target="_blank">' + data.businesses[i].name + '</a>');
-            var priceRating = $('<p style="color: whitesmoke; font-family: cursive;">' + data.businesses[i].price + '</p>');
-            var streetAddress = $('<address style="color: whitesmoke; font-family: cursive;"><br>' + data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + ' ' + data.businesses[i].location.zip_code + '</address>');
-            var restaurantPhone = $('<p style="color: whitesmoke; font-family: cursive;">Phone: ' + data.businesses[i].display_phone + '</p>');
+            var yelpSite = $('<a class="yelpSite" href="' + data.businesses[i].url + '" target="_blank">' + data.businesses[i].name + '</a>');
+            var priceRating = $('<p class="price">' + data.businesses[i].price + '</p>');
+            var streetAddress = $('<address class="address"><br>' + data.businesses[i].location.address1 + '<br>' + data.businesses[i].location.city + ' ' + data.businesses[i].location.state + ' ' + data.businesses[i].location.zip_code + '</address>');
+            var restaurantPhone = $('<p class="phone">Phone: ' + data.businesses[i].display_phone + '</p>');
 
             $(restaurantResults).append(cardDiv);
             $(cardBody).append(cardTitle);
